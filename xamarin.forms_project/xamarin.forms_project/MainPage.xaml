@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="xamarin.forms_project.MainPage">
+    <StackLayout Margin="20">
+        <Label  x:Name="label"
+	            Text="1ページ"
+                FontSize="20"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand" />
+        <Button Text="2ページ目へ"
+		        Clicked="Button_Clicked"
+		        HeightRequest="100"
+		        WidthRequest="200" />
+    </StackLayout>
+</ContentPage>

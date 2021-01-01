@@ -14,6 +14,10 @@
 
 ## Page Navigation(ページ遷移)
 ### url
+https://swallow-incubate.com/archives/blog/20191220
+補足
+yarnでinstallしたパッケージは"yarn start", npmでinstallしたパッケージは"npm install"
+
 * Flutter：-
 * React Native：-
 * Xamarin.Forms：-

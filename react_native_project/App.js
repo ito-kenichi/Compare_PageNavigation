@@ -1,52 +1,26 @@
-import 'react-native-gesture-handler';
-import React from 'react';
-import { Text, View, Button } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import React, { Component } from 'react';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import page2Screen from './screens/page2Screen';
+import Page1Screen from './screens/page1Screen';
+import Page1DetailScreen from './screens/page1DetailScreen';
 
-const Stack = createStackNavigator();
+// setting main nav
+const MainStack = createStackNavigator(
+  {
+    Page1: Page1Screen,
+    Page2: page2Screen,
+    Page3: Page1DetailScreen,
+  }
+)
 
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{ title: 'Welcome' }}
-        />
-        <Stack.Screen name="JaneProfile" component={JaneProfileScreen} />
-        <Stack.Screen name="BobProfile" component={BobProfileScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+const AppContainer = createAppContainer(MainStack)
+
+export default class App extends Component {
+
+  render() {
+    return (
+      <AppContainer />
+    );
+  }
 }
-
-const HomeScreen = ({ navigation }) => {
-  return (
-    <Button
-      title="Go to jane's profile"
-      onPress={() =>
-        navigation.push('JaneProfile', { name: 'Jane' })
-      }
-    />
-  );
-};
-
-const JaneProfileScreen = ({ navigation }) => {
-  return (
-    <View>
-      <Text>This is Jane's profile</Text>
-      <Button
-        title="Go to Bob's profile"
-        onPress={() =>
-          navigation.push('BobProfile', { name: 'Bob' })
-        }
-      />
-    </View>
-  );
-};
-
-const BobProfileScreen = () => {
-  return <Text>This is Bob's profile</Text>;
-};
