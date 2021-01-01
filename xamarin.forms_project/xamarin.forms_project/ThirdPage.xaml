@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="xamarin.forms_project.ThirdPage">
+    <StackLayout Margin="20">
+        <Label  x:Name="label"
+	            Text="3ページ"
+                FontSize="20"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+</ContentPage>

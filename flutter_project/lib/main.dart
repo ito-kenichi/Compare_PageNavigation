@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'わかりやすい'),
+      home: MyHomePage(title: '1ページ目'),
       routes: {
         '/second': (BuildContext context) => MySecondPage(),
         '/third': (BuildContext context) => MyThirdPage(),
@@ -70,7 +70,7 @@ class MyThirdPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('わかりみ'),
+        title: Text('3ページ目'),
       ),
       body: Center(
         child: Text('3ページ目'),
